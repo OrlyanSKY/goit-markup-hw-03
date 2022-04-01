@@ -7,6 +7,7 @@
     --black-color: #000000;
     --footer-text-color: rgba(255, 255, 255, 0.6);
     --filter-background: #f5f4fa;
+    --header-line: #ececec;
 }
 body {
     background-color: #ffffff;
@@ -47,6 +48,7 @@ p {
 .header {
     display: flex;
     align-items: center;
+    border-bottom: 1px solid var(--header-line);
 }
 /* Лого  */
 
@@ -199,6 +201,7 @@ p {
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
+    margin-bottom: 50px;
 }
 .products {
     display: flex;
@@ -209,7 +212,15 @@ p {
 
 /* Наша компуха */
 
-.team-title {
+.team {
+    display: flex;
+    text-align: center;
+}
+.team .item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.team .team-title {
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 16px;
@@ -225,7 +236,14 @@ p {
 .footer {
     background-color: var(--background-color-hero);
 }
+.footer-block {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
 .logo-footer {
+    display: inline-block;
+    margin-bottom: 20px;
+
     color: var(--white-color);
     text-decoration: none;
     font-family: 'Raleway';
@@ -254,14 +272,30 @@ p {
 .clear-link:focus {
     color: var(--accent-text-color);
 }
+.address-list .item {
+    display: block;
+}
+.address-list .item:not(:last-child) {
+    margin-bottom: 9px;
+}
 
 /* part2 PORTFOLIO */
 
 /* Кнопки */
-/* .filters {
-    display: inline-flex;
-} */
+.filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.filters .item:not(:last-child) {
+    margin-right: 8px;
+}
+
 .filter-button {
+    border-radius: 4px;
+    border: transparent;
+    padding: 6px 22px;
+
     color: var(--title-text-color);
     background-color: var(--filter-background);
     font-weight: 500;
@@ -278,7 +312,10 @@ p {
 }
 
 /* Проекты */
-
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+}
 .project-title {
     color: var(--title-text-color);
     font-weight: 700;
