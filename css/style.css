@@ -45,10 +45,14 @@ p {
 
 /* Header */
 .header {
-    display: flex;
-    align-items: center;
     border-bottom: 1px solid var(--header-line);
 }
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
 /* Лого  */
 
 .blue-logo {
@@ -182,6 +186,10 @@ p {
 
 .advantages-list {
     display: flex;
+}
+
+.advantages-list .item {
+    width: 270px;
 }
 
 .advantages-list .item:not(:last-child) {
