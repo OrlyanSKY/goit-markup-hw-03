@@ -41,7 +41,6 @@ p {
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
-    outline: 2px solid rgb(41, 113, 219);
 }
 
 /* Header */
@@ -56,7 +55,6 @@ p {
     color: var(--accent-text-color);
 }
 .logo {
-    display: flex;
     padding-top: 24px;
     padding-bottom: 25px;
 
@@ -94,9 +92,15 @@ p {
     letter-spacing: 0.02em;
     text-decoration: none;
 }
+
 .site-nav-link:hover,
 .site-nav-link:focus {
     color: var(--accent-text-color);
+}
+
+.activ {
+    color: var(--accent-text-color);
+    border-bottom: 4px solid var(--accent-text-color);
 }
 
 /* Контакты */
@@ -121,21 +125,19 @@ p {
     color: var(--accent-text-color);
 }
 
-/* Main */
+/* MAIN*/
 
-/* секция Hero */
+/* section HERO */
 
 .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
     background-color: var(--background-color-hero);
 }
 
-.hero-main {
-    padding: 200px 252px;
-    text-align: center;
-}
-
 .hero-title {
-    margin-bottom: 30px;
+    margin: 0 auto 30px auto;
 
     color: var(--white-color);
     font-weight: 900;
@@ -143,6 +145,7 @@ p {
     line-height: 1.36;
     text-transform: uppercase;
     letter-spacing: 0.06em;
+    max-width: 696px;
 }
 .hero-button {
     border-radius: 4px;
@@ -160,23 +163,27 @@ p {
     cursor: pointer;
 }
 
-/* наши преимущества */
+/*  section FEATURES  */
 
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
 }
-.no-padding {
+
+.features {
     padding-top: 94px;
 }
+
 /* типа "скрыл" логический заголовок */
 .hidden-title {
     position: absolute;
     visibility: hidden;
 }
+
 .advantages-list {
     display: flex;
 }
+
 .advantages-list .item:not(:last-child) {
     margin-right: 30px;
 }
@@ -189,11 +196,12 @@ p {
     font-weight: 700;
     text-transform: uppercase;
 }
+
 .advantages-text {
     line-height: 1.71;
 }
 
-/* Чем мы занимаемся */
+/* Section Чем мы занимаемся */
 
 .section-title {
     color: var(--title-text-color);
@@ -210,8 +218,10 @@ p {
     margin-right: 30px;
 }
 
-/* Наша компуха */
-
+/* ------------OUR TEAM--- */
+.back-color-section {
+    background-color: var(--filter-background);
+}
 .team {
     display: flex;
     text-align: center;
@@ -220,26 +230,40 @@ p {
     margin-right: 30px;
 }
 
-.team .team-title {
-    color: var(--title-text-color);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
+.team .item {
+    background-color: var(--white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
+
+.team-title,
 .team-text {
     font-size: 16px;
     line-height: 1.19;
 }
 
-/* Footer */
+.team-title {
+    margin-bottom: 10px;
+
+    color: var(--title-text-color);
+    font-weight: 500;
+}
+
+.team-card {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/*--------------------> FOOTER--- */
 
 .footer {
-    background-color: var(--background-color-hero);
-}
-.footer-block {
     padding-top: 60px;
     padding-bottom: 60px;
+
+    background-color: var(--background-color-hero);
 }
+/* ---------->LOGO */
 .logo-footer {
     display: inline-block;
     margin-bottom: 20px;
@@ -247,46 +271,55 @@ p {
     color: var(--white-color);
     text-decoration: none;
     font-family: 'Raleway';
-    font-style: normal;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
 }
+/* -------Address links */
+
+.white-link,
+.clear-link {
+    text-decoration: none;
+    font-style: normal;
+    line-height: 1.71;
+}
 
 .white-link {
-    text-decoration: none;
     color: var(--white-color);
-    font-style: normal;
 }
+
 .white-link:hover,
 .white-link:focus {
     color: var(--accent-text-color);
 }
+/* transparent links */
 .clear-link {
-    text-decoration: none;
     color: var(--footer-text-color);
-    font-style: normal;
-    line-height: 1.71;
 }
+
 .clear-link:hover,
 .clear-link:focus {
     color: var(--accent-text-color);
 }
+
 .address-list .item {
     display: block;
 }
+
 .address-list .item:not(:last-child) {
     margin-bottom: 9px;
 }
 
-/* part2 PORTFOLIO */
+/* ----------------PAGE 2 PORTFOLIO--------------- */
 
-/* Кнопки */
+/* >>>>>>>>BUTTONS<<<<<<*/
+
 .filters {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
 }
+
 .filters .item:not(:last-child) {
     margin-right: 8px;
 }
@@ -305,24 +338,48 @@ p {
     cursor: pointer;
     font-family: 'Roboto';
 }
+
 .filter-button:hover,
 .filter-button:focus {
     color: var(--white-color);
     background-color: var(--accent-text-color);
 }
 
-/* Проекты */
-.projects {
+/* PROJECTS */
+
+.card-set {
     display: flex;
     flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
 }
+
+.card-set .item {
+    margin-top: 30px;
+    margin-left: 30px;
+    flex-basis: calc(100% / 3 - 30px);
+}
+
+.card-set img {
+    display: block;
+    max-width: 100%;
+}
+.project-card {
+    padding: 20px 24px;
+    border: 1px solid #eeeeee;
+    border-top: 0;
+}
+
 .project-title {
+    margin-bottom: 4px;
+
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
 }
+
 .project-text {
     font-size: 16px;
     line-height: 1.88;
